@@ -7,4 +7,6 @@
 Для получения отчета выполнить mvn allure:serve
 
 Пример Allure отчета:
-![alt text](https://github.com/Mosfett1975/ApiTests/img/report example.jpg)
+![alt text](https://github.com/Mosfett1975/ApiTests/blob/master/img/reportexample.jpg?raw=true)
+
+При тестировании использовался JDK-17.0.7 и Maven 3.9.9
