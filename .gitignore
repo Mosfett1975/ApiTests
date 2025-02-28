@@ -9,6 +9,7 @@ target
 
 #Allure
 /allure-results/
+.allure
 
 #Reports
 *.log
