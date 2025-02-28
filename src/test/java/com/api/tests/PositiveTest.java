@@ -10,8 +10,8 @@ import static org.hamcrest.Matchers.*;
 
 @Epic("REST API Tests")
 @Feature("Posts API")
-@DisplayName("CRUD операции с постами")
-public class PostCrudTest extends BaseTest {
+@DisplayName("CRUD операции с эндпоинтом /post")
+public class PositiveTest extends BaseTest {
 
     @Test
     @Story("Create")

@@ -1,4 +1,4 @@
-package com.api.service;
+package postService;
 
 import com.api.dto.PostDTO;
 import io.restassured.response.Response;

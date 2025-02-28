@@ -1,7 +1,7 @@
-package com.api.service;
+package postService;
 
-import com.api.config.ApiConfig;
-import com.api.constants.Endpoints;
+import apiConfig.GetProperties;
+import apiConfig.Endpoints;
 import com.api.dto.PostDTO;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
@@ -21,7 +21,7 @@ public class PostService implements IPostService {
 
     public PostService() {
         requestSpec = new RequestSpecBuilder()
-                .setBaseUri(ApiConfig.getBaseUrl())
+                .setBaseUri(GetProperties.getBaseUrl())
                 .setContentType(ContentType.JSON)
                 .addFilter(new RequestLoggingFilter(LogDetail.ALL))
                 .addFilter(new ResponseLoggingFilter(LogDetail.ALL))

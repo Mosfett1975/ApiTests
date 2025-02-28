@@ -1,4 +1,4 @@
-package com.api.constants;
+package apiConfig;
 
 /**
  * Константы эндпоинтов API

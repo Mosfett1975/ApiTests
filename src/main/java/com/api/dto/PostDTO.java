@@ -8,7 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * DTO для работы с постами
+ * DTO (Data Transfer Object) для работы с постами
  */
 @Data
 @Builder

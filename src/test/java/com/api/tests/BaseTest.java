@@ -1,7 +1,7 @@
 package com.api.tests;
 
-import com.api.service.IPostService;
-import com.api.service.PostService;
+import postService.IPostService;
+import postService.PostService;
 import org.junit.jupiter.api.BeforeAll;
 
 /**
