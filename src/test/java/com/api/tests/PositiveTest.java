@@ -1,15 +1,20 @@
 package com.api.tests;
 
+import lombok.extern.java.Log;
+import lombok.extern.log4j.Log4j;
 import pojo.Post;
 import io.qameta.allure.*;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import javax.security.auth.login.LoginContext;
+import java.lang.management.LockInfo;
+
 import static org.hamcrest.Matchers.*;
 
 @Epic("REST API Tests")
-@Feature("Posts API")
+@Feature("Posts API позитивные тесты")
 @DisplayName("CRUD операции с эндпоинтом /post")
 public class PositiveTest extends BaseTest {
 
@@ -22,7 +27,7 @@ public class PositiveTest extends BaseTest {
         // Подготовка тестовых данных
         Post newPost = Post.builder()
                 .userId(1)
-                .title("New Post Title")
+                .title("Заголовок")
                 .body("This is the body of the new post")
                 .build();
 
@@ -155,8 +160,12 @@ public class PositiveTest extends BaseTest {
         response.then()
                 .statusCode(200);
 
-        // Дополнительная проверка - попытка получить удаленный пост
-        // Примечание: для JSON Placeholder API это не будет возвращать 404,
-        // так как фактического удаления не происходит
+        response = postService.getPostById(postId);
+
+        Allure.addAttachment("Коментарий", "всегда будет ошибка, поскольку фактически данные не удаляются");
+        // Проверка статуса ответа
+        response.then()
+                .statusCode(404);
+
     }
 }

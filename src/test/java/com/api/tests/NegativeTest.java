@@ -6,14 +6,14 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 @Epic("REST API Tests")
-@Feature("Негативные тесты")
+@Feature("Posts API негативные тесты")
 @DisplayName("Негативные операции с /post")
 public class NegativeTest extends BaseTest{
 
 
     @Test
     @DisplayName("Получение поста по несуществующему ID")
-    @Story("Negative - Invalid Data")
+    @Story("Read - отсутствующий ID")
     @Severity(SeverityLevel.NORMAL)
     @Description("Проверка получения поста по указанному несуществующему ID")
     public void testWithNonExistPostId() {
@@ -27,6 +27,8 @@ public class NegativeTest extends BaseTest{
         response.then()
                 .statusCode(404);
     }
+
+
 
 
 }
