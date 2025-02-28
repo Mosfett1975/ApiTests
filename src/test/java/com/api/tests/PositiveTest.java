@@ -1,6 +1,6 @@
 package com.api.tests;
 
-import com.api.dto.PostDTO;
+import pojo.Post;
 import io.qameta.allure.*;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.DisplayName;
@@ -20,7 +20,7 @@ public class PositiveTest extends BaseTest {
     @Description("Проверка создания нового поста с заданными параметрами")
     public void testCreatePost() {
         // Подготовка тестовых данных
-        PostDTO newPost = PostDTO.builder()
+        Post newPost = Post.builder()
                 .userId(1)
                 .title("New Post Title")
                 .body("This is the body of the new post")
@@ -97,7 +97,7 @@ public class PositiveTest extends BaseTest {
         int postId = 1;
 
         // Данные для обновления поста
-        PostDTO updatedPost = PostDTO.builder()
+        Post updatedPost = Post.builder()
                 .userId(1)
                 .title("Updated Post Title")
                 .body("This post has been updated")
@@ -125,7 +125,7 @@ public class PositiveTest extends BaseTest {
         int postId = 1;
 
         // Данные для частичного обновления поста (только заголовок)
-        PostDTO patchedPost = PostDTO.builder()
+        Post patchedPost = Post.builder()
                 .title("Patched Post Title")
                 .build();
 

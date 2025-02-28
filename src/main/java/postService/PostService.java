@@ -2,7 +2,7 @@ package postService;
 
 import apiConfig.GetProperties;
 import apiConfig.Endpoints;
-import com.api.dto.PostDTO;
+import pojo.Post;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
@@ -30,7 +30,7 @@ public class PostService implements IPostService {
     }
 
     @Override
-    public Response createPost(PostDTO post) {
+    public Response createPost(Post post) {
         return RestAssured.given()
                 .spec(requestSpec)
                 .body(post)
@@ -56,7 +56,7 @@ public class PostService implements IPostService {
     }
 
     @Override
-    public Response updatePost(int id, PostDTO post) {
+    public Response updatePost(int id, Post post) {
         return RestAssured.given()
                 .spec(requestSpec)
                 .pathParam("id", id)
@@ -66,7 +66,7 @@ public class PostService implements IPostService {
     }
 
     @Override
-    public Response patchPost(int id, PostDTO post) {
+    public Response patchPost(int id, Post post) {
         return RestAssured.given()
                 .spec(requestSpec)
                 .pathParam("id", id)

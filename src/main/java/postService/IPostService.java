@@ -1,6 +1,6 @@
 package postService;
 
-import com.api.dto.PostDTO;
+import pojo.Post;
 import io.restassured.response.Response;
 
 /**
@@ -12,7 +12,7 @@ public interface IPostService {
      * @param post объект с данными поста
      * @return ответ API
      */
-    Response createPost(PostDTO post);
+    Response createPost(Post post);
 
     /**
      * Получение всех постов
@@ -33,7 +33,7 @@ public interface IPostService {
      * @param post объект с обновленными данными
      * @return ответ API
      */
-    Response updatePost(int id, PostDTO post);
+    Response updatePost(int id, Post post);
 
     /**
      * Частичное обновление поста
@@ -41,7 +41,7 @@ public interface IPostService {
      * @param post объект с частичными данными для обновления
      * @return ответ API
      */
-    Response patchPost(int id, PostDTO post);
+    Response patchPost(int id, Post post);
 
     /**
      * Удаление поста
