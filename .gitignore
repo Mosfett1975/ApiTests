@@ -1,0 +1,14 @@
+# Idea files
+.idea
+.*\.iml
+*.iml
+.mdmp
+
+# Maven files
+target
+
+#Allure
+/allure-results/
+
+#Reports
+*.log
