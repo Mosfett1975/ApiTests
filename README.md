@@ -9,4 +9,4 @@
 Пример Allure отчета:
 ![alt text](https://github.com/Mosfett1975/ApiTests/blob/master/img/reportexample.jpg?raw=true)
 
-При тестировании использовался JDK-17.0.7 и Maven 3.9.9
+При создании использовался JDK-17.0.7 и Maven 3.9.9
